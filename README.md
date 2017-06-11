@@ -10,6 +10,7 @@ A single page application that calculates the number of words in a text file
 
 This application is built with Javascript, Node.js and npm. I decided to test drive without using a testing framework and wrote my own unit tests. This enabled me to focus on writing methodically solid, expandable code.
 
+I used the module pattern to keep code clean and separated. This allowed me to encapsulate methods within classes. 
 
 ### User stories
 ```
