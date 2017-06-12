@@ -19,6 +19,11 @@ describe('WordCruncher', function() {
       wc.splitWords();
       expect(wc.text[1]).toEqual("is");
     });
+    it('strips all punctuation', function() {
+      var text = "This., is #! an $% example * of ;: a = string () with punctuation!"
+      wc.removePunctuation();
+      expect(wc.text).toEqual("This is an example of a string with punctuation");
+    });
   });
 
 
