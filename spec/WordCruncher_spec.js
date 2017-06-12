@@ -14,5 +14,12 @@ describe('WordCruncher', function() {
     });
   });
 
+  describe('string format', function() {
+    it('splits text into individual words', function() {
+      wc.splitWords();
+      expect(wc.text[1]).toEqual("is");
+    });
+  });
+
 
 });
