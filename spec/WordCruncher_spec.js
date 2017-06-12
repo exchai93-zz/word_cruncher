@@ -30,5 +30,13 @@ describe('WordCruncher', function() {
     });
   });
 
+  describe('number of words', function() {
+    it('returns a value of one when there is one of each word', function() {
+      wc.text = ["this", "is", "a"];
+      wc.countWords();
+      expect(wc.numberOfWords()).toEqual({'this': 1, 'is': 1, 'a': 1});
+    });
+  });
+
 
 });
