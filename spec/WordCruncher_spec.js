@@ -9,32 +9,37 @@ describe('WordCruncher', function() {
   });
 
   describe('initialize', function() {
-    it('contains text', function() {
+    it('has a parameter in a string format', function() {
       expect(wc.text).toEqual(text);
     });
   });
 
   describe('string format', function() {
-    it('splits text into individual words', function() {
-      wc.splitWords();
-      expect(wc.text[1]).toEqual("is");
-    });
-    it('strips string of all punctuation', function() {
+    it('strips everything except alphanumeric characters and whitespace', function() {
       wc.text = "This is an example of a string with punctuation .,:;!()$%";
-      wc.removePunctuation();
+      wc.removeNonAlphanumerics();
       expect(wc.text).toEqual("This is an example of a string with punctuation ");
     });
-    it('strips string of all upper case characters', function() {
-      wc.removeCapitals();
+
+    it('replaces upper case with lower case characters', function() {
+      wc.replaceUpperCase();
       expect(wc.text).toEqual("this is a sample text");
+    });
+
+    it('splits text into an array of individual words', function() {
+      wc.splitText();
+      expect(wc.text[0]).toEqual("This");
+      expect(wc.text[1]).toEqual("is");
     });
   });
 
-  describe('number of words', function() {
-    it('returns a value of one when there is one of each word', function() {
-      wc.text = ["this", "is", "a"];
-      wc.countWords();
-      expect(wc.numberOfWords()).toEqual({'this': 1, 'is': 1, 'a': 1});
+  describe('counting number of words', function() {
+    it('returns values of one', function() {
+      wc.removeNonAlphanumerics();
+      wc.replaceUpperCase();
+      wc.splitText();
+      wc.countWordFrequencies();
+      expect(wc.wordCount).toEqual({"this": 1, "is": 1, "a": 1, "sample": 1, "text": 1});
     });
   });
 
