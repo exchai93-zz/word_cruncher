@@ -11,3 +11,7 @@ WordCruncher.prototype.splitWords = function () {
 WordCruncher.prototype.removePunctuation = function () {
   this.text = this.text.replace(/[^\w\s]|_/g, "");
 };
+
+WordCruncher.prototype.removeCapitals= function () {
+  this.text = this.text.toLowerCase();
+};
