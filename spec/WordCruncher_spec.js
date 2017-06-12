@@ -9,8 +9,8 @@ describe('WordCruncher', function() {
   });
 
   describe('initialize', function() {
-    it('has a parameter in a string format', function() {
-      expect(wc.text).toEqual(text);
+    it('takes a parameter in a string format', function() {
+      expect(wc.text).toEqual("This is a sample text");
     });
   });
 
@@ -39,7 +39,9 @@ describe('WordCruncher', function() {
       wc.replaceUpperCase();
       wc.splitText();
       wc.countWordFrequencies();
-      expect(wc.wordCount).toEqual({"this": 1, "is": 1, "a": 1, "sample": 1, "text": 1});
+      expect(wc.wordCount).toEqual({"this": 1, "is": 1,
+                                    "a": 1, "sample": 1,
+                                    "text": 1});
     });
   });
 
