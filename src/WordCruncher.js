@@ -2,6 +2,8 @@
 
 function WordCruncher(text) {
   this.text = text
+  this.wordList = [];
+  this.wordCount = {};
 }
 
 WordCruncher.prototype.removeNonAlphanumerics = function () {

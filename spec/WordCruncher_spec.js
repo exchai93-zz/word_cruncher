@@ -12,6 +12,14 @@ describe('WordCruncher', function() {
     it('takes a parameter in a string format', function() {
       expect(wc.text).toEqual("This is a sample text");
     });
+
+    it('has an empty wordList array', function() {
+      expect(wc.wordList).toEqual([]);
+    });
+
+    it('has an empty wordCount hash', function() {
+      expect(wc.wordCount).toEqual({});
+    })
   });
 
   describe('string format', function() {
