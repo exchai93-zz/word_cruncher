@@ -7,3 +7,7 @@ function WordCruncher(text) {
 WordCruncher.prototype.splitWords = function () {
   this.text = this.text.split(" ");
 };
+
+WordCruncher.prototype.removePunctuation = function () {
+  this.text = this.text.replace(/[^\w\s]|_/g, "");
+};
