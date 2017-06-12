@@ -10,10 +10,9 @@ describe('WordCruncher', function() {
 
   describe('initialize', function() {
     it('contains text', function() {
-      expect(wc.readText()).toEqual(text);
+      expect(wc.text).toEqual(text);
     });
   });
-
 
 
 });
