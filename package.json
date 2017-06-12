@@ -1,0 +1,19 @@
+{
+  "name": "word_cruncher",
+  "version": "1.0.0",
+  "description": "An application that calculates the number of words in a text file",
+  "main": "interface.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exchai93/word_cruncher.git"
+  },
+  "author": "Emily Chai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exchai93/word_cruncher/issues"
+  },
+  "homepage": "https://github.com/exchai93/word_cruncher#readme"
+}
