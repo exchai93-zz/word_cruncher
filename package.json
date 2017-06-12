@@ -2,7 +2,7 @@
   "name": "word_cruncher",
   "version": "1.0.0",
   "description": "An application that calculates the number of words in a text file",
-  "main": "interface.js",
+  "main": "index.js",
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/exchai93/word_cruncher/issues"
   },
-  "homepage": "https://github.com/exchai93/word_cruncher#readme"
+  "homepage": "https://github.com/exchai93/word_cruncher#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
 }
