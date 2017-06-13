@@ -61,3 +61,16 @@ WordCruncher.prototype.printOutput = function () {
 
   return this.sortedWords;
 };
+
+WordCruncher.prototype.runAnalysis = function () {
+  this.convertUpperCase();
+  this.removePunctuation();
+  this.splitText();
+  this.countWordFrequencies();
+  this.printOutput();
+};
+
+var fs = require('fs');
+var textFile = fs.readFileSync('text_files/the_railway_children.txt', 'utf8');
+  var wordCruncher = new WordCruncher(data);
+  wc.runAnalysis();
