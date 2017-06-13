@@ -1,7 +1,7 @@
 'use strict';
 
 function WordCruncher(text) {
-  this.text = text
+  this.text = text;
   this.wordsArray = [];
   this.wordCount = {};
   this.countedWords = [];
@@ -32,7 +32,7 @@ WordCruncher.prototype.countWordFrequencies = function () {
       this.wordCount[word] = 1;
       this.countedWords.push(word);
     }
-  };
+  }
 
   return this.wordCount;
 };
@@ -70,7 +70,19 @@ WordCruncher.prototype.runAnalysis = function () {
   this.printOutput();
 };
 
-var fs = require('fs');
-var textFile = fs.readFileSync('text_files/the_railway_children.txt', 'utf8');
-  var wordCruncher = new WordCruncher(data);
-  wc.runAnalysis();
+var requirejs = require('requirejs');
+requirejs.config({
+  require('fs');
+  nodeRequire: require
+});
+
+requirejs(['err', 'data'],
+var fs = require('fs') {
+  fs.readfile('text_files/the_railway_children.txt', 'utf8', function (err, data) {
+    if (err) throw err;
+
+    var wordCruncher = new WordCruncher(data);
+    wordCruncher.runAnalysis();
+    }
+  });
+});
