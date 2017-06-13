@@ -45,7 +45,7 @@ describe('WordCruncher', function() {
   });
 
   describe('#countWordFrequencies', function() {
-    it('counts the number of frequencies for each word', function() {
+    it('counts the frequencies for each word', function() {
       wc.text = "This is a sample text";
       wc.splitText();
       expect(wc.countWordFrequencies()).toEqual({this: 1, is: 1,
@@ -54,5 +54,13 @@ describe('WordCruncher', function() {
     });
   });
 
+  describe('#isPrime', function() {
+    it('returns true if the number is a prime', function() {
+      expect(wc.isPrime(11)).toEqual(true);
+    });
 
+    it('returns false is the number is not prime', function() {
+      expect(wc.isPrime(4)).toEqual(false);
+    });
+  });
 });
