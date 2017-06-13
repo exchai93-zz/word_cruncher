@@ -21,8 +21,9 @@ WordCruncher.prototype.splitText = function () {
 };
 
 WordCruncher.prototype.countWordFrequencies = function () {
-  // var wordList = this.wordList
-  for (var i = 0; i < this.wordsArray.length; i++) {
+  var wordsArray = this.wordsArray;
+
+  for (var i = 0; i < wordsArray.length; i++) {
     var word = this.wordsArray[i];
 
     if (this.wordCount.hasOwnProperty(word)) {
@@ -48,15 +49,15 @@ WordCruncher.prototype.isPrime = function (number) {
 
 WordCruncher.prototype.printOutput = function () {
 
-for (var i = 0; i < this.countedWords.length; i++) {
-  var word = this.countedWords[i];
+  for (var i = 0; i < this.countedWords.length; i++) {
+    var word = this.countedWords[i];
 
-  if(this.isPrime(this.wordCount[word])) {
-    this.sortedWords.push(word + ': ' + this.wordCount[word] + ' (PRIME)');
-  } else {
-    this.sortedWords.push(word + ': ' + this.wordCount[word]);
+    if(this.isPrime(this.wordCount[word])) {
+      this.sortedWords.push(word + ': ' + this.wordCount[word] + ' (PRIME)');
+    } else {
+      this.sortedWords.push(word + ': ' + this.wordCount[word]);
+    }
   }
-}
 
-return this.sortedWords;
+  return this.sortedWords;
 };
