@@ -22,9 +22,10 @@ This application is built with Javascript, Node.js and npm.
 
 **Domain modelling:** After writing out user stories, I made sure to make a draft plan of the direction I was
 
-**Test Driven Development:** I initially sought out to write my own unit tests without a testing framework, however then realising this proved more difficult that I had anticipated. I wanted to test with ease so decided to use Jasmine. TDD ensured I made logical design decisions and allowed me to identify bugs and solve them quickly. 
 
-**Refactoring:**
+**Test Driven Development:** I initially sought out to write my own unit tests without a testing framework, however then realising this proved more difficult that I had anticipated. I wanted to test with ease so decided to use Jasmine. TDD ensured I made logical design decisions and allowed me to identify bugs and solve them quickly.
+
+**Refactoring:** I refactored where
 
 ### Future improvements
 
