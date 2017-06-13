@@ -6,27 +6,29 @@ function WordCruncher(text) {
   this.wordCount = {};
 }
 
-WordCruncher.prototype.removeNonAlphanumerics = function () {
-  this.text = this.text.replace(/[^\w\s]|_/g, "");
-};
-
 WordCruncher.prototype.replaceUpperCase= function () {
   this.text = this.text.toLowerCase();
 };
 
-WordCruncher.prototype.splitText = function () {
-  this.text = this.text.split(" ");
+WordCruncher.prototype.removeNonAlphanumerics = function () {
+  this.text = this.text.replace(/[^\w\s]|_/g, "");
 };
 
-WordCruncher.prototype.countWordFrequencies = function (words) {
+WordCruncher.prototype.splitText = function () {
+  this.wordList = this.text.split(" ");
+};
 
-  var wordCount = {};
+WordCruncher.prototype.countWordFrequencies = function () {
+  // var wordList = this.wordList
+  for (var i = 0; i < this.wordList.length; i++) {
+    var word = this.wordList[i];
 
-  this.text.forEach(function(n) {
-    if (this.wordCount[this.text[n]] !== undefined) {
-      this.wordCount[this.text[n]] ++;
+    if (this.wordCount.hasOwnProperty(word)) {
+      this.wordCount[word] += 1;
     } else {
-      this.wordCount[this.text[n]] == 1;
+      this.wordCount[word] = 1;
     }
-  })
+  };
+
+  return this.wordCount
 };
