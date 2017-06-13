@@ -36,7 +36,7 @@ $ node src/WordCruncher.js
 - I had initially envisioned having an interface for my application however due to time constraints, I decided to run the application with node on the terminal.
 - I have had an issue solving the error `Uncaught ReferenceError: require is not defined` when I run node. I installed [requirejs](http://requirejs.org/docs/node.html) however I have been unable to fix this.
 
-### Future improvements
+## Future improvements
 
 If I had more time, I would like to improve my code by extracting out separate classes to ensure Single Responsibility Principle. Potentially having classes for:
 - string formatting logic
