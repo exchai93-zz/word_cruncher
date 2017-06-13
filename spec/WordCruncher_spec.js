@@ -22,17 +22,17 @@ describe('WordCruncher', function() {
     });
   });
 
-  describe('#replaceUpperCase', function() {
-    it('replaces upper case with lower case characters', function() {
-      wc.replaceUpperCase();
+  describe('#convertUpperCase', function() {
+    it('converts upper case to lower case characters', function() {
+      wc.convertUpperCase();
       expect(wc.text).toEqual("this is a sample text");
     });
   });
 
-  describe('#removeNonAlphanumerics', function() {
+  describe('#removePunctuation', function() {
     it('strips everything except alphanumeric characters and whitespace', function() {
       wc.text = "This is an example of a string with punctuation .,:;!()$%";
-      wc.removeNonAlphanumerics();
+      wc.removePunctuation();
       expect(wc.text).toEqual("This is an example of a string with punctuation ");
     });
   });
@@ -66,8 +66,11 @@ describe('WordCruncher', function() {
 
   describe('#printOutput', function() {
     it('prints the words with its frequency and whether it is a prime', function () {
-      wc.wordsArray = [ "this", "this", "is", "a", "sample", "text" ];
-      wc.wordCount = { this: 2, is: 1, a: 1, sample: 1, text:1 };
+      wc.text = "This This is a sample text";
+      wc.convertUpperCase();
+      wc.removePunctuation();
+      wc.splitText();
+      wc.countWordFrequencies();
       expect(wc.printOutput()).toEqual([ "this: 2 (PRIME)", "is: 1",
                                         "a: 1", "sample: 1",
                                         "text: 1" ]);

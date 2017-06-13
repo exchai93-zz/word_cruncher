@@ -4,14 +4,15 @@ function WordCruncher(text) {
   this.text = text
   this.wordsArray = [];
   this.wordCount = {};
+  this.countedWords = [];
   this.sortedWords = [];
 }
 
-WordCruncher.prototype.replaceUpperCase= function () {
+WordCruncher.prototype.convertUpperCase= function () {
   this.text = this.text.toLowerCase();
 };
 
-WordCruncher.prototype.removeNonAlphanumerics = function () {
+WordCruncher.prototype.removePunctuation = function () {
   this.text = this.text.replace(/[^\w\s]|_/g, "");
 };
 
@@ -28,6 +29,7 @@ WordCruncher.prototype.countWordFrequencies = function () {
       this.wordCount[word] += 1;
     } else {
       this.wordCount[word] = 1;
+      this.countedWords.push(word);
     }
   };
 
@@ -46,8 +48,8 @@ WordCruncher.prototype.isPrime = function (number) {
 
 WordCruncher.prototype.printOutput = function () {
 
-for (var i = 0; i < this.wordsArray.length; i++) {
-  var word = this.wordsArray[i];
+for (var i = 0; i < this.countedWords.length; i++) {
+  var word = this.countedWords[i];
 
   if(this.isPrime(this.wordCount[word])) {
     this.sortedWords.push(word + ': ' + this.wordCount[word] + ' (PRIME)');
