@@ -4,7 +4,7 @@ This is an application that:
 1. Counts the frequencies of words in a text file
 2. Calculates whether the frequencies are a prime number
 
-###Installation
+## Installation
 
 - **Make sure you have [Node](https://nodejs.org/en/) installed**
 
@@ -21,7 +21,7 @@ $ npm install
 ```
 $ node src/WordCruncher.js
 ```
-###Approach
+## Approach
 
 **Planning:** Focusing on agile and Object Orientated Design, I broke down the specification into smaller issues to write [user stories](#User Stories). This enabled me to identify 'noun' and 'verb' relationships, diagramming throughout this process.
 
@@ -45,13 +45,13 @@ If I had more time, I would like to improve my code by extracting out separate c
 - interface
 I would also implement the module pattern ensure clean, separated code where methods would be isolated from each other.
 
-### Technologies
+## Technologies
 - Javascript
 - Node.js v6.10.3
 - Npm v3.10.10
 - Jasmine v2.6.3
 
-### User stories
+## User stories
 ```
 As a user,
 So that I can start the application,
