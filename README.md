@@ -1,6 +1,8 @@
 # Word Cruncher
 
-A single page application that counts the number of words in a text file
+A single page application that:
+1. Counts the frequencies of words in a text file
+2. Calculates whether the frequencies are a prime number
 
 ### How to run
 
@@ -16,15 +18,17 @@ A single page application that counts the number of words in a text file
 
 ### Approach
 
-This application is built with Javascript, Node.js and npm. I decided to test drive without using a testing framework and wrote my own unit tests. This enabled me to focus on writing methodically solid, expandable code.
+This application is built with Javascript, Node.js and npm.
 
-I used the module pattern to keep code clean and separated. This allowed me to encapsulate methods within classes.
+**Domain modelling:** After writing out user stories, I made sure to make a draft plan of the direction I was
 
-Domain modelling:
+**Test Driven Development:** I initially sought out to write my own unit tests without a testing framework, however then realising this proved more difficult that I had anticipated. I wanted to test with ease so decided to use Jasmine. TDD ensured I made logical design decisions and allowed me to identify bugs and solve them quickly. 
 
-Test Driven Development:
+**Refactoring:**
 
-Refactoring:
+### Future improvements
+
+This is by no means perfect. If I had more time, I would like to improve my code by extracting out separate classes to ensure Single Responsibility Principle and using the module pattern where possible. This would ensure clean, separated code where methods would be encapsulated from each other.
 
 ### Technologies
 - Javascript
