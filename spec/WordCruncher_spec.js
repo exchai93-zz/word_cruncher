@@ -13,8 +13,8 @@ describe('WordCruncher', function() {
       expect(wc.text).toEqual("This is a sample text");
     });
 
-    it('has an empty wordList array', function() {
-      expect(wc.wordList).toEqual([]);
+    it('has an empty wordsArray', function() {
+      expect(wc.wordsArray).toEqual([]);
     });
 
     it('has an empty wordCount hash', function() {
@@ -40,7 +40,7 @@ describe('WordCruncher', function() {
   describe('#splitText', function() {
     it('splits text into an array of individual words', function() {
       wc.splitText();
-      expect(wc.wordList).toEqual(["This", "is", "a", "sample", "text"]);
+      expect(wc.wordsArray).toEqual([ "This", "is", "a", "sample", "text" ]);
     });
   });
 
@@ -48,9 +48,9 @@ describe('WordCruncher', function() {
     it('counts the frequencies for each word', function() {
       wc.text = "This is a sample text";
       wc.splitText();
-      expect(wc.countWordFrequencies()).toEqual({this: 1, is: 1,
-                                    a: 1, sample: 1,
-                                    text: 1});
+      expect(wc.countWordFrequencies()).toEqual({ This: 1, is: 1,
+                                                a: 1, sample: 1,
+                                                text: 1 });
     });
   });
 
@@ -61,6 +61,16 @@ describe('WordCruncher', function() {
 
     it('returns false is the number is not prime', function() {
       expect(wc.isPrime(4)).toEqual(false);
+    });
+  });
+
+  describe('#printOutput', function() {
+    it('prints the words with its frequency and whether it is a prime', function () {
+      wc.wordsArray = [ "this", "this", "is", "a", "sample", "text" ];
+      wc.wordCount = { this: 2, is: 1, a: 1, sample: 1, text:1 };
+      expect(wc.printOutput()).toEqual([ "this: 2 (PRIME)", "is: 1",
+                                        "a: 1", "sample: 1",
+                                        "text: 1" ]);
     });
   });
 });

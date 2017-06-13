@@ -2,8 +2,9 @@
 
 function WordCruncher(text) {
   this.text = text
-  this.wordList = [];
+  this.wordsArray = [];
   this.wordCount = {};
+  this.sortedWords = [];
 }
 
 WordCruncher.prototype.replaceUpperCase= function () {
@@ -15,13 +16,13 @@ WordCruncher.prototype.removeNonAlphanumerics = function () {
 };
 
 WordCruncher.prototype.splitText = function () {
-  this.wordList = this.text.split(" ");
+  this.wordsArray = this.text.split(" ");
 };
 
 WordCruncher.prototype.countWordFrequencies = function () {
   // var wordList = this.wordList
-  for (var i = 0; i < this.wordList.length; i++) {
-    var word = this.wordList[i];
+  for (var i = 0; i < this.wordsArray.length; i++) {
+    var word = this.wordsArray[i];
 
     if (this.wordCount.hasOwnProperty(word)) {
       this.wordCount[word] += 1;
@@ -30,7 +31,7 @@ WordCruncher.prototype.countWordFrequencies = function () {
     }
   };
 
-  return this.wordCount
+  return this.wordCount;
 };
 
 WordCruncher.prototype.isPrime = function (number) {
@@ -41,4 +42,19 @@ WordCruncher.prototype.isPrime = function (number) {
     }
   }
   return number > 1;
+};
+
+WordCruncher.prototype.printOutput = function () {
+
+for (var i = 0; i < this.wordsArray.length; i++) {
+  var word = this.wordsArray[i];
+
+  if(this.isPrime(this.wordCount[word])) {
+    this.sortedWords.push(word + ': ' + this.wordCount[word] + ' (PRIME)');
+  } else {
+    this.sortedWords.push(word + ': ' + this.wordCount[word]);
+  }
+}
+
+return this.sortedWords;
 };
