@@ -4,7 +4,7 @@ This is an application that:
 1. Counts the frequencies of words in a text file
 2. Calculates whether the frequencies are a prime number
 
-### Installation
+###Installation
 
 - **Make sure you have [Node](https://nodejs.org/en/) installed**
 
@@ -21,7 +21,7 @@ $ npm install
 ```
 $ node src/WordCruncher.js
 ```
-### Approach
+###Approach
 
 **Planning:** Focusing on agile and Object Orientated Design, I broke down the specification into smaller issues to write [user stories](#User Stories). This enabled me to identify 'noun' and 'verb' relationships, diagramming throughout this process.
 
@@ -34,7 +34,7 @@ $ node src/WordCruncher.js
 **Challenges:**
 - Familiarising myself with Javascript again and setting up the environment took longer than expected. However, I have now learnt a lot these few days!
 - I had initially envisioned having an interface for my application however due to time constraints, I decided to run the application with node on the terminal.
-- I have had an issue solving the error `Uncaught ReferenceError: require is not defined` when I run node. I installed [requirejs](http://requirejs.org/docs/node.html) however I have been unable to fix this. 
+- I have had an issue solving the error `Uncaught ReferenceError: require is not defined` when I run node. I installed [requirejs](http://requirejs.org/docs/node.html) however I have been unable to fix this.
 
 ### Future improvements
 
