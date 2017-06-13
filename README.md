@@ -43,6 +43,7 @@ If I had more time, I would like to improve my code by extracting out separate c
 - word counting
 - managing text files
 - interface
+<p>
 I would also implement the module pattern ensure clean, separated code where methods would be isolated from each other.
 
 ## Technologies
