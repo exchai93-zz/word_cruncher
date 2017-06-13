@@ -59,7 +59,7 @@ describe('WordCruncher', function() {
       expect(wc.isPrime(11)).toEqual(true);
     });
 
-    it('returns false is the number is not prime', function() {
+    it('returns false if the number is not prime', function() {
       expect(wc.isPrime(4)).toEqual(false);
     });
   });
